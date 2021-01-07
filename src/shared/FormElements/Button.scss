@@ -1,0 +1,13 @@
+.link-btn {
+   text-decoration: none;
+   color: white;
+}
+
+.button-btn {
+   border: none;
+   background-color: transparent;
+
+   &:hover {
+      cursor: pointer;
+   }
+}

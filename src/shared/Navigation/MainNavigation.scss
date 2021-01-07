@@ -1,0 +1,140 @@
+.arrow-down {
+   align-self: center;
+   width: 1.18em;
+   height: 2.2em;
+   background-image: url(../images/amazon-icons-sprite.png);
+   background-size: 21rem;
+}
+
+.top-span {
+   font-family: "AmazonEmber_Rg";
+   font-weight: 8400;
+   font-size: 12px;
+}
+
+// LOGO
+.header__logo {
+   align-items: flex-end;
+   width: 6.5rem;
+   background-image: url("../images/amazon-logo.png");
+   background-size: 80%;
+   background-repeat: no-repeat;
+   background-position-y: .982rem;
+   background-position-x: .15rem;
+   margin-left: .8em;
+
+   span {
+      font-size: 14px;
+   }
+}
+
+// ADDRESS 
+.header__address {
+   display: grid;
+   grid-template-rows: 48% 33%;
+   grid-template-columns: 18% 89%;
+   grid-template-areas: 
+   "void top-span"
+   "marker bottom-span";
+   justify-items: left;
+   align-items: end;
+   padding-right: .7rem;
+
+   svg {
+      position: relative;
+      grid-area: marker;
+      top: -3px;
+      left: 0.5px;
+   }
+
+   .top-span {
+      grid-area: top-span;
+      color: #ccc;
+   }
+
+   .bottom-span {
+      grid-area: bottom-span;
+   }
+}
+
+// SEARCH-BAR
+.header__search-bar, .header__search-bar:hover {
+   width: 48.3rem;
+   border: none;
+}
+
+// ACCOUNT
+.header__account {
+   flex-direction: row;
+
+   .account__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .arrow-down--account {
+      background-position-x: -31.8rem;
+      background-position-y: -46.4rem;
+   }
+   
+}
+
+// CART
+.header__carrello {
+   align-items: flex-end;
+   width: 6.3rem;
+   background-image: url(../images/amazon-icons-sprite.png);
+   background-size: 22rem;
+   background-position-x: -35.1rem;
+   background-position-y: -48.75rem;
+
+   .cart__title {
+      position: relative;
+      top: -3px;
+      left: -3px;
+   }
+
+   .cart__no-items {
+      align-self: center;
+      position: relative;
+      left: -22.6px;
+      top: -2px;
+      font-size: large;
+      color: #f08804;
+   }
+}
+
+// L-TUTTE
+.lower__tutte {
+   width: 4em;
+   font-family: "AmazonEmber_Bd";
+   justify-content: flex-end;
+   background-image: url("../images/amazon-icons-sprite.png");
+   background-size: 22rem;
+   background-position-x: -10.5rem;
+   background-position-y: -44rem;
+}
+
+// L-PRIME
+.lower__prime {
+   width: 4em;
+
+   .arrow-down--prime {
+      background-position-x: -31.8rem;
+      background-position-y: -46.7rem;
+   } 
+}
+
+//L-AD
+.lower__ad {
+   position: relative;
+   right: -5.6rem;
+   max-width: 24rem;
+   width: 24rem;
+   height: 90%;
+   background-image: url("https://images-eu.ssl-images-amazon.com/images/G/29/digital/video/magellan/country/Italy/SWM/Test001/IT_SWM_400x39_HO._CB485945077_.jpg");
+   background-position-y: -.1rem;
+   background-position-x: -.1rem;
+   background-size: 100%;
+}

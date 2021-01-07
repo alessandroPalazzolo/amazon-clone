@@ -1,0 +1,54 @@
+.card {
+   position: relative;
+   width: 19.6rem;
+   height: 26rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: white;
+
+   .card__header {
+      height: 18%;
+      width: 87%;
+      display: flex;
+      align-items: center;
+      font-size: .86rem;
+   }
+   
+   .card__body {
+      position: relative;
+      height: 67%;
+      width: 87%;
+      overflow: hidden;
+
+     img {
+         cursor: pointer;
+         height: 100%;
+         width: auto;
+         position: absolute;
+         top: -9999px;
+         bottom: -9999px;
+         left: -9999px;
+         right: -9999px;
+         margin: auto;
+      }
+   }
+
+   .card__footer {
+      height: 13.7%;
+      width: 87%;
+      display: flex;
+      align-items: center;
+   }
+
+   .link-btn--card {
+      color: #007185;
+      font-size: .9rem;
+      font-family: AmazonEmber_Rg;
+
+      &:hover {
+         text-decoration: underline;
+         color: #C7511F
+      }
+   }
+}

@@ -1,0 +1,23 @@
+@keyframes carouselAnimate {
+   0% {
+      transform: translateX(100%)
+   }
+   100% {
+      transform: translateX(0%)
+   }
+}
+
+.carousel--main {
+   &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 20em;
+      top: calc(100% - 20em);
+      background: linear-gradient(transparent .1em,rgb(234,237,237));
+   }
+
+   img {
+      animation: carouselAnimate 200ms linear;
+   }
+}

@@ -1,0 +1,61 @@
+.modal {
+   position: fixed;
+   z-index: 100;
+   border-radius: 3px;
+   background-color: white;
+
+   .arrow {
+      position: relative;
+      width: 1rem;
+      height: 1rem;
+      background-color: white;
+      transform: rotate(45deg);
+      z-index: -1;
+   }
+}
+
+.modal--address {
+   top: 6rem;
+   left: calc(50vw - 11.5rem);
+   height: 29.2rem;
+   width: 23.3rem;
+   border-radius: 10px;
+
+   .arrow--address {
+      display: none;
+   }
+}
+
+.modal--account {
+   top: 3.4rem;
+   left: 49.969rem;
+   width: 30.7rem;
+   height: 30rem;
+
+   .arrow--account{
+      top: -0.45rem;
+      left: 21.25rem;
+   }
+}
+
+.modal--tutte {
+   width: 22.5rem;
+   height: 100vh;
+   border-radius: 0;
+
+   .arrow--tutte {
+      display: none;
+   }
+}
+
+.modal--prime {
+   top: 6.1rem;
+   left: 29rem;
+   height: 26.4rem;
+   width: 21.2rem;
+
+   .arrow--prime {
+      top: -.4em;
+      left: 3.65em;
+   }
+}
