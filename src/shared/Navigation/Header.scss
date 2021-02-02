@@ -3,11 +3,13 @@
    display: flex;
    align-items: center;
    color: white;
+   position: relative;
 }
 
 .header--main {
    height: 3.8rem;
    background-color: rgb(20,25,33);
+   justify-content: space-around;
 }
 
 .header--lower {
@@ -16,3 +18,4 @@
    padding-left: .6em;
    box-sizing: border-box;
 }
+

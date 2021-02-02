@@ -1,8 +1,9 @@
 .search-bar {
    display: flex;
    position: relative;
-   height: 2.5rem;
+   height: 100%;
    border: 2px solid transparent;
+   box-sizing: border-box;
 
    &:focus-within {
       box-shadow: 
@@ -17,7 +18,7 @@
    font-family: "AmazonEmber_Rg";
    font-weight: 200;
    font-size: 12px;
-   width: 11.8em;
+   width: 20%;
    height: 100%;
    border: none;
    border-top-left-radius: 4px;
@@ -37,7 +38,7 @@
 }
 
 .search-bar__input {
-   width: 79%;
+   width: 80%;
    height: 2.55rem;
    height: 100%;
    border: none;
@@ -46,7 +47,7 @@
 
 .search-bar__button {
    height: 100%;
-   width: 3.1rem;
+   flex: 0 0 50px;
    background-color:#febd69;
    border: none;
    border-top-right-radius: 4px;
@@ -60,3 +61,12 @@
       background-color:rgb(243,168,71)
    }  
 }  
+
+@media (min-width: 1800px) {
+   .search-bar__select {
+      width: 11%;
+   }
+   .search-bar__input {
+      width: 90%;
+   }
+}

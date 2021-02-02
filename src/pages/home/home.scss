@@ -1,13 +1,6 @@
-@keyframes carouselAnimate {
-   0% {
-      transform: translateX(100%)
-   }
-   100% {
-      transform: translateX(0%)
-   }
-}
+.carousel--ad {
+   position: absolute;
 
-.carousel--main {
    &::after {
       position: absolute;
       content: "";
@@ -17,7 +10,29 @@
       background: linear-gradient(transparent .1em,rgb(234,237,237));
    }
 
-   img {
-      animation: carouselAnimate 200ms linear;
+}
+
+.carousel--products {
+   height: 17.5rem;
+   width: 96.8vw;
+   box-sizing: border-box;
+   margin: auto;
+   padding: 0 2em;
+   overflow: hidden;
+
+   img { 
+      margin: auto 1.5em auto 0em;
+      height: 70%;
+      width: auto; 
+   }
+}
+
+@media (min-width:1500px){
+   .carousel--ad {
+      width: 1500px;
+      margin-left: calc((100vw - 1500px)/2);
+   }
+   .carousel--products {
+      width: 1345px;
    }
 }

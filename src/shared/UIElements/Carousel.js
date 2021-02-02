@@ -31,8 +31,9 @@ const Carousel = props => {
 
    const l = Children.count(props.children);
 
+   // STATE && STYLES
    const [ carouselState, dispatch ] = useReducer(carouselReducer, {
-      index: Math.floor(Math.random() * l),
+      index: props.infinite ? Math.floor(Math.random() * l): 0,
       transition: "transform 250ms ease-in-out"
    });
 
@@ -41,15 +42,19 @@ const Carousel = props => {
       transition: `${carouselState.transition}`
    }
 
+   // AUTOMATE CAROUSEL
    useEffect(() => {
-      const automateCarousel = setTimeout(() => dispatch({
-         type: "ALL",
-         newIndex: carouselState.index + 1,
-         newTransition: "transform 250ms ease-in-out"
-      }), 6000);
-      return () => clearTimeout(automateCarousel);
+      if (props.auto) {
+         const automateCarousel = setTimeout(() => dispatch({
+            type: "ALL",
+            newIndex: (carouselState.index + 1) %l,
+            newTransition: "transform 250ms ease-in-out"
+         }), 7000);
+         return () => clearTimeout(automateCarousel);
+      }
    }, [carouselState]);
 
+   // CLICK HANDLERS
    const leftClickHandler = () => {
       dispatch({
          type: "ALL", 
@@ -65,6 +70,7 @@ const Carousel = props => {
       });
    } 
 
+   // TRANSITION HANDLER
    const transitionHandler = () => {
       if (carouselState.index == l-1 || carouselState.index == 0) {
          dispatch({
@@ -80,7 +86,7 @@ const Carousel = props => {
          <div
             className={`carousel__slider`}
             style={styles}
-            onTransitionEnd={transitionHandler}
+            onTransitionEnd={props.infinite ? transitionHandler : ""}
          >
             {props.children}
          </div>

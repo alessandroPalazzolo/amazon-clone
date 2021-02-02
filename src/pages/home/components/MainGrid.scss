@@ -1,8 +1,9 @@
 .main-grid {
    position: relative;
    top: 16rem;
-   width: 98.4vw;
+   width: 98vw;
    margin: auto;
+   margin-bottom: 17rem;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
@@ -65,6 +66,12 @@
             }
          }
       }
+   }
+}
+
+@media (min-width: 1500px) {
+   .main-grid {
+      width: 1390px;
    }
 }
 

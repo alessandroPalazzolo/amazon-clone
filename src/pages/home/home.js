@@ -5,7 +5,7 @@ import Carousel from "../../shared/UIElements/Carousel";
 
 import "./home.scss";
 
-const mainCarouselItems = [
+const carouselAd = [
    "https://images-eu.ssl-images-amazon.com/images/G/29/kindle/journeys/NjczMzc2MmQt/NjczMzc2MmQt-NDk2NWFiNzEt-w1500._CB413745996_.jpg",
 
    "https://images-eu.ssl-images-amazon.com/images/G/29/kindle/journeys/ZmI2ZDQyNTkt/ZmI2ZDQyNTkt-MTMyOWE2NTkt-w1500._CB413694611_.jpg",
@@ -19,17 +19,38 @@ const mainCarouselItems = [
    "https://images-eu.ssl-images-amazon.com/images/G/29/kindle/journeys/ZmI2ZDQyNTkt/ZmI2ZDQyNTkt-MTMyOWE2NTkt-w1500._CB413694611_.jpg",
 ]
 
+const carouselProducts = [
+   "https://m.media-amazon.com/images/I/61y1GdLDC+L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/414W43nzOUL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41hoy4FhGJL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51Ye5W+M2CL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/512V+zNxQ9L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41XF54PQeIL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51SKhR+r4+L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51R58AqMXYL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41L+SqxAHcL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41tzcmt86YL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41QLyTXPhLL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41pteTOUHgL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41MTiz-I5HL._AC_SY200_.jpg",
+]
+
 const Home = () => {
    return (
       <>
-         <Carousel className="carousel--main">
-            {
-               mainCarouselItems.map((el, idx) => {
-                  return <img src={el} alt="carouselItem" key={idx}></img>
-               })
-            }
+         <Carousel className="carousel--ad" auto infinite>
+            {carouselAd.map((el, idx) => {
+               return <img src={el} alt="carouselItem" key={idx}></img>;
+            })}
          </Carousel>
+
          <MainGrid></MainGrid>
+
+         <Carousel className="carousel--products">
+            {carouselProducts.map((elem, idx) => {
+               return <img src={elem} alt="carouselProduct" key={idx}></img>;
+            })}
+         </Carousel>
       </>
    );
 

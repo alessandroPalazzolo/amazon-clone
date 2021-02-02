@@ -79,9 +79,8 @@ const MainNavigation = props => {
             {lowerHeaderItems.map((el, idx) => {
                if (idx == 3) {
                   return (
-                     <Button to="/lower-header">
+                     <Button to="/lower-header" key={idx}>
                         <HeaderItem
-                           key={idx}
                            className="lower-item lower__prime"
                            modalOnOver="prime"
                            lower
@@ -94,8 +93,8 @@ const MainNavigation = props => {
                }
 
                return (
-                  <Button to="/lower-header">
-                     <HeaderItem key={idx} className="lower-item">
+                  <Button to="/lower-header" key={idx}>
+                     <HeaderItem className="lower-item">
                         <span>{el}</span>
                      </HeaderItem>
                   </Button>

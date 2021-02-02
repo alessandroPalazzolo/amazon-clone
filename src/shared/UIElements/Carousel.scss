@@ -1,7 +1,9 @@
 .carousel {
-   position: absolute;
+   position: relative;
    height: 600px;
    width: 100vw;
+   background-color: white;
+   overflow: hidden;
 
    .carousel__slider {
       width: 100%;
@@ -11,8 +13,8 @@
 
    img {
       cursor: pointer;
-      height: 100%;
-      width: 100%; 
+      height: auto;
+      min-width: 100%;  
    }
 }
 
@@ -27,13 +29,13 @@
 
 .carousel__left-arrow {
    @extend %arrow-styles;
-   left: 1.8em;
+   left: 1.5%;
    background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
 }
 
 .carousel__right-arrow {
    @extend %arrow-styles;
-   left: 97.3em;
+   left: 95%;
    background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
    background-position-x: -2em;
 }
