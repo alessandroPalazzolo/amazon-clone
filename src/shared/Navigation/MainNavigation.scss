@@ -59,7 +59,7 @@
 
 // SEARCH-BAR
 .header__search-bar, .header__search-bar:hover {
-   width: 48.3rem;
+   width: fit-content;
    height: 2.75rem;
    border: none;
 }
@@ -141,17 +141,3 @@
    background-size: 100%;
 }
 
-
-@media (min-width:1500px) {
-   .header__search-bar, .header__search-bar:hover {
-      flex: 0 1 70.3rem;
-      height: 2.8rem;
-   }
-}
-
-@media (min-width:1670px) {
-   .header__search-bar, .header__search-bar:hover {
-      flex: 0 1 80.3rem;
-      height: 2.8rem;
-   }
-}

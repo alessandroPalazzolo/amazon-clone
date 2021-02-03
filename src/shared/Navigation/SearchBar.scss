@@ -18,7 +18,7 @@
    font-family: "AmazonEmber_Rg";
    font-weight: 200;
    font-size: 12px;
-   width: 20%;
+   flex: 0 0 134px;
    height: 100%;
    border: none;
    border-top-left-radius: 4px;
@@ -38,8 +38,7 @@
 }
 
 .search-bar__input {
-   width: 80%;
-   height: 2.55rem;
+   width: calc(100vw - 780px);
    height: 100%;
    border: none;
    padding-left: 0.5em;
@@ -47,7 +46,7 @@
 
 .search-bar__button {
    height: 100%;
-   flex: 0 0 50px;
+   flex: 0 0 47px;
    background-color:#febd69;
    border: none;
    border-top-right-radius: 4px;
@@ -62,11 +61,3 @@
    }  
 }  
 
-@media (min-width: 1800px) {
-   .search-bar__select {
-      width: 11%;
-   }
-   .search-bar__input {
-      width: 90%;
-   }
-}
