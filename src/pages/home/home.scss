@@ -17,13 +17,79 @@
    width: 96.6vw;
    box-sizing: border-box;
    margin: auto;
-   padding: 0 2em;
+   padding: 0 1.2em;
    overflow: hidden;
+
+   &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 1.4%;
+      height: 17.5rem;
+      background-color: white;
+      z-index: 1;
+   }
+
+   &::after {
+      position: absolute;
+      top: 0;
+      left: 98.6%;
+      content: "";
+      width: 1.5%;
+      height: 17.5rem;
+      background-color: white;
+   }
+
+   %arrow-styles--products {
+      top: 7em;
+      height: 7.5em;
+      width: 3.5em;
+      border-radius: 3px; 
+      // background-color: white;
+      background-image: none;
+      box-shadow: 0 1px 3px #888;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 2.8em;
+         left: 1em;
+         background-color: inherit;
+         width: 1.2em;
+         height: 1.9em;
+         background-size: 11em;
+         background-image: url("https://m.media-amazon.com/images/G/01/AUIClients/AmazonGatewayAuiAssets-gw_sprite_desktop-25075f36f083535bad9a2e0edabbb339435e8e65._V2_.png");
+      }
+
+      &:hover:after {
+         background-position-y: -1.9em;
+      }
+   }
+
+   .carousel__left-arrow {
+      @extend %arrow-styles--products;
+      left: 1.3em;  
+
+      &::after {
+         background-position-x: -1.1em;
+      }
+   }
+
+   .carousel__right-arrow {
+      @extend %arrow-styles--products;
+      left: 95.1%;
+      
+      &::after {
+         left: 1.2em;
+         background-position-x: .1em;
+      }
+   }
 
    img { 
       margin: auto 1.5em auto 0em;
       height: 70%;
-      width: auto; 
+      min-width: auto; 
    }
 }
 

@@ -19,6 +19,7 @@ const Button = props => {
       <button
          className={`button-btn ${props.className}`}
          onClick={props.onClick}
+         style={props.style}
       ></button>
    );
 };

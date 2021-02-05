@@ -6,22 +6,20 @@ import "./Carousel.scss";
 
 const carouselReducer = (state, action) => {
    switch (action.type) {
-      case "ALL":
+      case "SLIDER":
          return({
             ...state,
             index: action.newIndex,
             transition: action.newTransition
          })
-      case "INDEX": 
+      case "SLIDER+ARROW": 
          return({
             ...state,
-            index: action.newIndex
+            index: action.newIndex,
+            transition: action.newTransition,
+            rightArrowStyles: action.newRightArrowStyles,
+            leftArrowStyles: action.newLeftArrowStyles
          });
-      case "TRANSITION":
-         return({
-            ...state,
-            transition: action.newTransition
-         })
       default:
          return state;
    }
@@ -34,7 +32,9 @@ const Carousel = props => {
    // STATE && STYLES
    const [ carouselState, dispatch ] = useReducer(carouselReducer, {
       index: props.infinite ? Math.floor(Math.random() * l): 0,
-      transition: "transform 250ms ease-in-out"
+      transition: "transform 250ms ease-in-out",
+      leftArrowStyles: "rgba(255,255,255,0.5)",
+      rightArrowStyles: "white"
    });
 
    const styles = {
@@ -46,7 +46,7 @@ const Carousel = props => {
    useEffect(() => {
       if (props.auto) {
          const automateCarousel = setTimeout(() => dispatch({
-            type: "ALL",
+            type: "SLIDER",
             newIndex: (carouselState.index + 1) %l,
             newTransition: "transform 250ms ease-in-out"
          }), 7000);
@@ -56,17 +56,43 @@ const Carousel = props => {
 
    // CLICK HANDLERS
    const leftClickHandler = () => {
+      let newIndex, { index } = carouselState, newLeftArrowStyles, newRightArrowStyles;
+
+      if (props.infinite) {
+         newIndex = index-1;
+      }
+      else {
+         newIndex = index == 0 ? index : index-1;
+         newLeftArrowStyles = newIndex == 0 ? "rgba(255,255,255,0.5)" : "white";
+         newRightArrowStyles = "white"
+      }
+
       dispatch({
-         type: "ALL", 
-         newIndex: carouselState.index-1,
-         newTransition: "transform 250ms ease-in-out"
+         type: "SLIDER+ARROW", 
+         newIndex: newIndex,
+         newTransition: "transform 250ms ease-in-out",
+         newRightArrowStyles: newRightArrowStyles,
+         newLeftArrowStyles: newLeftArrowStyles
       });
    } 
    const rightClickHandler = () => {
+      let newIndex, { index } = carouselState, newLeftArrowStyles, newRightArrowStyles;
+
+      if (props.infinite) {
+         newIndex = index+1;
+      }
+      else {
+         newIndex = index == 1 ? index : index+1;
+         newRightArrowStyles = newIndex == 1 ? "rgba(255,255,255,0.5)" : "white";
+         newLeftArrowStyles = "white";
+      }
+
       dispatch({
-         type: "ALL", 
-         newIndex: carouselState.index+1,
-         newTransition: "transform 250ms ease-in-out"
+         type: "SLIDER+ARROW", 
+         newIndex: newIndex,
+         newTransition: "transform 250ms ease-in-out",
+         newRightArrowStyles: newRightArrowStyles,
+         newLeftArrowStyles: newLeftArrowStyles
       });
    } 
 
@@ -74,7 +100,7 @@ const Carousel = props => {
    const transitionHandler = () => {
       if (carouselState.index == l-1 || carouselState.index == 0) {
          dispatch({
-            type: "ALL",
+            type: "SLIDER",
             newTransition: "none",
             newIndex: carouselState.index ? 1 : l-2
          });
@@ -93,10 +119,12 @@ const Carousel = props => {
          <Button
             className="carousel__left-arrow"
             onClick={leftClickHandler}
+            style={{backgroundColor: props.infinite ? "" : carouselState.leftArrowStyles}}
          ></Button>
          <Button
             className="carousel__right-arrow"
             onClick={rightClickHandler}
+            style={{backgroundColor: props.infinite ? "" : carouselState.rightArrowStyles}}
          ></Button>
       </div>
    );

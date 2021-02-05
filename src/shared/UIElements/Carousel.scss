@@ -25,17 +25,16 @@
    top: 6.9em;
    background-size: 4.4rem;
    background-position: left;
+   background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
 }
 
 .carousel__left-arrow {
    @extend %arrow-styles;
    left: 1.5%;
-   background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
 }
 
 .carousel__right-arrow {
    @extend %arrow-styles;
    left: 95%;
-   background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
    background-position-x: -2em;
 }

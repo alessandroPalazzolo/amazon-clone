@@ -55,12 +55,12 @@ const MainGrid = () => {
          <Card id="main-grid__prime-video">
             <div className="prime-video--filter">
                <h2 className="prime-video__header">Guarda su Prime Video</h2>
-               <p className="prime-video__title">The Office</p>
+               <p className="prime-video__title">Mr. Robot</p>
                <p className="prime-video__footer">Scopri più film e serie TV</p>
             </div>
             <img
                alt="Offerte Amazon Outlet"
-               src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/278528df7eb08b4e1d09281cf8fddec21f9a58288a232423e4d65c1258a3ca1a._RI_V_TTW_QL40_AC_SL792_.jpg"
+               src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/cd3eeaa8a6dc2903cc02b83bebd22daf67e60eecadc9727df851c690f277f489._RI_V_TTW_.jpg"
             ></img>
          </Card>
 

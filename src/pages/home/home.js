@@ -31,8 +31,11 @@ const carouselProducts = [
    "https://m.media-amazon.com/images/I/41L+SqxAHcL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/41tzcmt86YL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/41QLyTXPhLL._AC_SY200_.jpg",
-   "https://m.media-amazon.com/images/I/41pteTOUHgL._AC_SY200_.jpg",
-   "https://m.media-amazon.com/images/I/41MTiz-I5HL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41oKiltofGL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51+U79ZDXjL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51BkPvYzZZL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41ADr2-PxPL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51OrKPgO7EL._AC_SY200_.jpg"
 ]
 
 const Home = () => {
