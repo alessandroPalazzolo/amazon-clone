@@ -23,7 +23,7 @@ const MainNavigation = props => {
    return (
       <>
          <Header className="header--main">
-            <Button exact to="/">
+            <Button className="link-btn--header" exact to="/">
                <HeaderItem className="header__logo">
                   <span className="top-span">.it</span>
                </HeaderItem>
@@ -39,7 +39,7 @@ const MainNavigation = props => {
                <SearchBar />
             </HeaderItem>
 
-            <Button to="/account">
+            <Button className="link-btn--header" to="/account">
                <HeaderItem
                   className="header__account"
                   modalOnOver="account"
@@ -53,14 +53,14 @@ const MainNavigation = props => {
                </HeaderItem>
             </Button>
 
-            <Button to="/resi">
+            <Button className="link-btn--header" to="/resi">
                <HeaderItem>
                   <span className="top-span">Resi</span>
                   <span>e ordini</span>
                </HeaderItem>
             </Button>
 
-            <Button to="/carrello">
+            <Button className="link-btn--header" to="/carrello">
                <HeaderItem className="header__carrello">
                   <span className="cart__no-items">0</span>
                   <span className="cart__title">Carrello</span>
@@ -79,7 +79,7 @@ const MainNavigation = props => {
             {lowerHeaderItems.map((el, idx) => {
                if (idx == 3) {
                   return (
-                     <Button to="/lower-header" key={idx}>
+                     <Button className="link-btn--header" to="/lower-header" key={idx}>
                         <HeaderItem
                            className="lower-item lower__prime"
                            modalOnOver="prime"
@@ -93,7 +93,7 @@ const MainNavigation = props => {
                }
 
                return (
-                  <Button to="/lower-header" key={idx}>
+                  <Button className="link-btn--header" to="/lower-header" key={idx}>
                      <HeaderItem className="lower-item">
                         <span>{el}</span>
                      </HeaderItem>

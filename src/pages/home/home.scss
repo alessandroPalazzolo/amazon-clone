@@ -1,5 +1,33 @@
 .carousel--ad {
    position: absolute;
+   height: 600px;
+   width: 100vw;
+
+   img {
+      height: auto;
+      min-width: 100%; 
+   }
+
+   %arrow-styles--ad {
+      height: 5em;
+      width: 3em;
+      top: 6.9em;
+      background-size: 4.4rem;
+      background-position: left;
+      background-image: url("https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI_y7.png") ;
+   }
+
+   .carousel__left-arrow {
+      @extend %arrow-styles--ad;
+      left: 1.5%;
+   }
+
+   .carousel__right-arrow {
+      @extend %arrow-styles--ad;
+      left: 95%;
+      background-position-x: -2em;
+   }
+
 
    &::after {
       position: absolute;
@@ -12,13 +40,32 @@
 
 }
 
+
+// CAROUSEL-PRODUCTS
+
 .carousel--products {
-   height: 17.5rem;
+   height: 17.9rem;
    width: 96.6vw;
    box-sizing: border-box;
    margin: auto;
    padding: 0 1.2em;
-   overflow: hidden;
+   flex-direction: column;
+   justify-content: center;
+
+   .carousel__header {
+      display: flex;
+      align-items: baseline;
+      margin: -.4em 0 0.4em .1em;
+
+      .carousel__title {
+         margin: 0;
+         margin-right: .8em;
+         font-family: AmazonEmber_Rg;
+         font-size: 21px;
+         font-weight: 400;
+         color: rgb(68, 68, 68);
+      }
+   }
 
    &::before {
       position: absolute;
@@ -42,11 +89,13 @@
    }
 
    %arrow-styles--products {
-      top: 7em;
+      opacity: 0;
+      transition: opacity 1s;
+      top: 7.8em;
       height: 7.5em;
       width: 3.5em;
       border-radius: 3px; 
-      // background-color: white;
+      background-color: inherit;
       background-image: none;
       box-shadow: 0 1px 3px #888;
 
@@ -55,7 +104,7 @@
          position: absolute;
          top: 2.8em;
          left: 1em;
-         background-color: inherit;
+         background-color: transparent;
          width: 1.2em;
          height: 1.9em;
          background-size: 11em;
@@ -65,6 +114,10 @@
       &:hover:after {
          background-position-y: -1.9em;
       }
+   }
+
+   &:hover %arrow-styles--products{
+      opacity: 1;
    }
 
    .carousel__left-arrow {
@@ -87,8 +140,8 @@
    }
 
    img { 
-      margin: auto 1.5em auto 0em;
-      height: 70%;
+      margin: 0 1.5em auto 0;
+      height: auto;
       min-width: auto; 
    }
 }

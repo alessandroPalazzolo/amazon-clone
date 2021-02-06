@@ -32,10 +32,10 @@ const carouselProducts = [
    "https://m.media-amazon.com/images/I/41tzcmt86YL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/41QLyTXPhLL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/41oKiltofGL._AC_SY200_.jpg",
-   "https://m.media-amazon.com/images/I/51+U79ZDXjL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51-mo91cYnL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/51BkPvYzZZL._AC_SY200_.jpg",
    "https://m.media-amazon.com/images/I/41ADr2-PxPL._AC_SY200_.jpg",
-   "https://m.media-amazon.com/images/I/51OrKPgO7EL._AC_SY200_.jpg"
+   "https://m.media-amazon.com/images/I/41MTiz-I5HL._AC_SY200_.jpg"
 ]
 
 const Home = () => {
@@ -49,7 +49,7 @@ const Home = () => {
 
          <MainGrid></MainGrid>
 
-         <Carousel className="carousel--products">
+         <Carousel className="carousel--products" title="Consigliati in base alla tua Lista dei Desideri">
             {carouselProducts.map((elem, idx) => {
                return <img src={elem} alt="carouselProduct" key={idx}></img>;
             })}

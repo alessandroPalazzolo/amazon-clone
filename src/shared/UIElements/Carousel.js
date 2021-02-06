@@ -109,6 +109,12 @@ const Carousel = props => {
 
    return (
       <div className={`carousel ${props.className}`}>
+         {props.title && (
+            <div className="carousel__header">
+               <h3 className="carousel__title">{props.title}</h3>
+               <Button to="/random-category">Visualizza di più</Button>
+            </div>
+         )}
          <div
             className={`carousel__slider`}
             style={styles}
@@ -119,12 +125,20 @@ const Carousel = props => {
          <Button
             className="carousel__left-arrow"
             onClick={leftClickHandler}
-            style={{backgroundColor: props.infinite ? "" : carouselState.leftArrowStyles}}
+            style={{
+               backgroundColor: props.infinite
+                  ? ""
+                  : carouselState.leftArrowStyles,
+            }}
          ></Button>
          <Button
             className="carousel__right-arrow"
             onClick={rightClickHandler}
-            style={{backgroundColor: props.infinite ? "" : carouselState.rightArrowStyles}}
+            style={{
+               backgroundColor: props.infinite
+                  ? ""
+                  : carouselState.rightArrowStyles,
+            }}
          ></Button>
       </div>
    );
