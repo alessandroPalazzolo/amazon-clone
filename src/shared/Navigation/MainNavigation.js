@@ -31,8 +31,8 @@ const MainNavigation = props => {
 
             <HeaderItem className="header__address" modalOnClick="address">
                <SVG type="marker"></SVG>
-               <span className="top-span">Invia ad Alessandro</span>
-               <span className="bottom-span">Siena 53100</span>
+               <span className="top-span">Invia a Alessandro</span>
+               <span className="bottom-span" id="bottom-span--address">Siena 53100</span>
             </HeaderItem>
 
             <HeaderItem className="header__search-bar">
@@ -47,7 +47,7 @@ const MainNavigation = props => {
                >
                   <span className="account__text">
                      <span className="top-span">Ciao Alessandro</span>
-                     <span>Account e Liste</span>
+                     <span className="bottom-span">Account e Liste</span>
                   </span>
                   <span className="arrow-down arrow-down--account"></span>
                </HeaderItem>
@@ -56,7 +56,7 @@ const MainNavigation = props => {
             <Button className="link-btn--header" to="/resi">
                <HeaderItem>
                   <span className="top-span">Resi</span>
-                  <span>e ordini</span>
+                  <span className="bottom-span">e ordini</span>
                </HeaderItem>
             </Button>
 

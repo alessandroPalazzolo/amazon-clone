@@ -6,12 +6,13 @@
 
    .carousel__slider {
       width: 100%;
-      height: fit-content;
+      height: 70%;
       display: flex;
    }
 
    img {
       cursor: pointer; 
+      height: auto;
    }
 }
 

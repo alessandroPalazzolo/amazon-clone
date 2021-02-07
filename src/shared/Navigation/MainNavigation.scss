@@ -8,8 +8,14 @@
 
 .top-span {
    font-family: "AmazonEmber_Rg";
-   font-weight: 8400;
+   font-weight: 400;
    font-size: 12px;
+}
+
+.bottom-span {
+   font-family: "AmazonEmber_Bd";
+   font-size: 14px;
+   font-weight: 700;
 }
 
 // LOGO
@@ -52,7 +58,7 @@
       color: #ccc;
    }
 
-   .bottom-span {
+   #bottom-span--address {
       grid-area: bottom-span;
    }
 }
@@ -89,6 +95,8 @@
    background-size: 22rem;
    background-position-x: -35.1rem;
    background-position-y: -48.75rem;
+   margin-left: .1rem;
+   margin-right: .5rem;
 
    .cart__title {
       position: relative;
@@ -99,8 +107,8 @@
    .cart__no-items {
       align-self: center;
       position: relative;
-      left: -22.6px;
-      top: -2px;
+      left: -1.3em;
+      top: -0.15em;
       font-size: large;
       color: #f08804;
    }

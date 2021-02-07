@@ -2,8 +2,8 @@
    display: flex;
    position: relative;
    height: 100%;
+   width: fit-content;
    border: 2px solid transparent;
-   box-sizing: border-box;
 
    &:focus-within {
       box-shadow: 
@@ -38,7 +38,7 @@
 }
 
 .search-bar__input {
-   width: calc(100vw - 780px);
+   width: calc(100vw - 755px);
    height: 100%;
    border: none;
    padding-left: 0.5em;

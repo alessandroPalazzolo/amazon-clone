@@ -6,7 +6,7 @@ const SVG = props => {
          <svg
             viewBox="0 0 24 24"
             width="19"
-            height="17"
+            height="16"
             stroke="white"
             stroke-width="2.2"
             fill="none"
