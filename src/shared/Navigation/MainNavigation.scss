@@ -138,7 +138,7 @@
 //L-AD
 .lower__ad {
    position: relative;
-   // margin-right: 0px;
+   margin-right: 0;
    margin-left: auto;
    max-width: 24rem;
    width: 24rem;
@@ -147,6 +147,6 @@
    background-position-y: -.1rem;
    background-position-x: -.1rem;
    background-size: 100%;
-   flex-shrink: 0;
+   flex-shrink: 1;
 }
 

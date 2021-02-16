@@ -8,6 +8,7 @@ const MainGrid = () => {
    return (
       <div className="main-grid">
          <Card
+            className="card__grid"
             id="main-grid__item-1"
             header="Ancora più offerte con Amazon Outlet"
             footer="Scopri"
@@ -19,6 +20,7 @@ const MainGrid = () => {
          </Card>
 
          <Card
+            className="card__grid"
             id="main-grid__item-2"
             header="Offerta top"
             footer="Scopri tutte le offerte"
@@ -31,6 +33,7 @@ const MainGrid = () => {
          </Card>
 
          <Card
+            className="card__grid"
             id="main-grid__item-3"
             header="5€ di sconto con Amazon Music Free"
             footer="Scopri di più"
@@ -42,6 +45,7 @@ const MainGrid = () => {
          </Card>
 
          <Card
+            className="card__grid"
             id="main-grid__item-4"
             header="Offerte Amazon"
             footer="Scopri"
@@ -65,6 +69,7 @@ const MainGrid = () => {
          </Card>
 
          <Card
+            className="card__grid"
             id="main-grid__item-5"
             header="Prime Video: film e serie TV in streaming"
             footer="Iscriviti subito"
@@ -76,6 +81,7 @@ const MainGrid = () => {
          </Card>
 
          <Card
+            className="card__grid"
             id="main-grid__item-6"
             header="3 mesi d'uso gratuito di Amazon Music"
             footer="Scopri"

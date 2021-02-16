@@ -1,7 +1,7 @@
 .main-grid {
    position: relative;
    top: 16rem;
-   width: 98vw;
+   width: 96.6vw;
    margin: auto;
    margin-bottom: 17rem;
    display: grid;
@@ -12,6 +12,8 @@
    "prime-video prime-video item-5 item-6";
    justify-items: center;
    row-gap: 1.2rem;
+   column-gap: 1.35rem;
+   overflow: hidden;
 }
 
 #main-grid__item-1 { grid-area: item-1; }
@@ -23,7 +25,7 @@
 
 #main-grid__prime-video { 
    grid-area: prime-video;
-   width: 46.3em;
+   width: 100%;
    background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/cd3eeaa8a6dc2903cc02b83bebd22daf67e60eecadc9727df851c690f277f489._RI_V_TTW_.jpg");
    background-size: 100%;
 
