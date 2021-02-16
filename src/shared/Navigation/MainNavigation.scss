@@ -26,11 +26,13 @@
    background-size: 80%;
    background-repeat: no-repeat;
    background-position-y: .982rem;
-   background-position-x: .15rem;
+   background-position-x: .25rem;
    margin-left: .8em;
 
    span {
+      position: relative;
       font-size: 14px;
+      left: 2px;
    }
 }
 
