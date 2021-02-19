@@ -150,12 +150,27 @@
    }
 }
 
+
+// CARDS-ROW
+
+.cards-row {
+   height: fit-content;
+   width: 96.6vw;
+   margin: auto;
+   margin-bottom: 1rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+// MEDIA
+
 @media (min-width:1500px){
    .carousel--ad {
       width: 1500px;
       margin-left: calc((100vw - 1500px)/2);
    }
-   .carousel--products {
+   .carousel--products, .cards-row {
       width: 1340px;
    }
 }

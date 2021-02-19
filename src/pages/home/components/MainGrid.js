@@ -24,10 +24,17 @@ const MainGrid = () => {
             id="main-grid__item-2"
             header="Offerta top"
             footer="Scopri tutte le offerte"
+            details={{
+               euro: [499,700],
+               cents: [99,99],
+               currency: "€",
+               product: "XGIMI Halo LED 1080P Full HD",
+               type: "discount"
+            }}
          >
             <img
                alt="Offerta top"
-               src="https://m.media-amazon.com/images/G/29/IT-hq/2021/img/Personal_Care_Appliances/XCM_CUTTLE_1302461_1542090_IT_3630686_500x500_it_IT._AC_SY240_.jpg"
+               src="https://images-na.ssl-images-amazon.com/images/I/41sVOO+tMNL._AC_SY240_.jpg"
             ></img>
 
          </Card>

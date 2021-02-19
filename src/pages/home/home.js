@@ -2,6 +2,7 @@ import React from "react";
 
 import MainGrid from "./components/MainGrid";
 import Carousel from "../../shared/UIElements/Carousel";
+import CardsRow from "./components/CardsRow";
 
 import "./home.scss";
 
@@ -63,19 +64,62 @@ const Home = () => {
 
          <MainGrid></MainGrid>
 
-         <Carousel className="carousel--products" title="Consigliati in base alla tua Lista dei Desideri">
+         <Carousel
+            className="carousel--products"
+            title="Consigliati in base alla tua Lista dei Desideri"
+         >
             {firstCarouselProducts.map((elem, idx) => {
                return <img src={elem} alt="carouselProduct" key={idx}></img>;
             })}
          </Carousel>
 
-         <Carousel className="carousel--products" title="Correlati agli articoli visualizzati">
-            {
-               secondCarouselProducts.map((el,idx) => {
-                  return <img key={idx} src={el} alt={el}></img>;
-               })
-            }
+         <Carousel
+            className="carousel--products"
+            title="Correlati agli articoli visualizzati"
+         >
+            {secondCarouselProducts.map((el, idx) => {
+               return <img key={idx} src={el} alt={el}></img>;
+            })}
          </Carousel>
+
+         <CardsRow
+            data={[
+               {
+                  header: "Offerta Lampo",
+                  img:"https://images-na.ssl-images-amazon.com/images/I/51tWgDnfkAL._AC_SY240_.jpg",
+                  details: {
+                     euro: [254, 501],
+                     cents: [99, 49],
+                     currency: "€",
+                     product: "9E+9TZ+ARM7+7E+9.BK phone",
+                     type: "range",
+                  },
+                  review: false,
+                  footer: "Scopri di più",
+               },
+               {
+                  header: "Le migliori novità in CD e Vinili",
+                  img:"https://images-eu.ssl-images-amazon.com/images/G/29/Music/NYP/Music_NYP_379x304._SY304_CB422614963_.jpg",
+                  details: false,
+                  review: false,
+                  footer: "Scopri",
+               },
+               {
+                  header: "Valuta il tuo acquisto",
+                  img:"https://images-eu.ssl-images-amazon.com/images/I/413-cMFDzyL._SR215,215_.jpg",
+                  details: false,
+                  review: true,
+                  footer: "Scopri altri prodotti da recensire",
+               },
+               {
+                  header: "Tutte le nostre offerte",
+                  img:"https://images-eu.ssl-images-amazon.com/images/G/29/Events/XCM_Manual_1300553_1532081_ES_es_category_card_es_es_3615802_379x304_1X_IT._SY304_CB412344895_.jpg",
+                  details: false,
+                  review: false,
+                  footer: "Scopri di più",
+               },
+            ]}
+         ></CardsRow>
       </>
    );
 
