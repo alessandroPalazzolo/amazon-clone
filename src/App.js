@@ -4,11 +4,13 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/home/home";
 import User from "./pages/user/user";
 import MainNavigation from "./shared/Navigation/MainNavigation";
+import Footer from "./shared/Navigation/Footer";
 
 function App() {
   return (
      <>
         <MainNavigation />
+
         <Switch>
            <Route exact path="/">
               <Home />
@@ -29,6 +31,8 @@ function App() {
            </Route>
            <Redirect to="/"></Redirect>
         </Switch>
+
+        <Footer/>
      </>
   );
 }
