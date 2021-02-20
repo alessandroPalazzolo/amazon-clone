@@ -19,6 +19,15 @@
    }
 }
 
+.link-btn--sponsor-info {
+   color: rgb(85, 85, 85);
+   font-size: 11px;
+
+   &:hover {
+      text-decoration: none;
+   }
+}
+
 .button-btn {
    border: none;
    background-color: transparent;

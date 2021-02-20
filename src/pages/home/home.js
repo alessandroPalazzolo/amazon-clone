@@ -3,6 +3,7 @@ import React from "react";
 import MainGrid from "./components/MainGrid";
 import Carousel from "../../shared/UIElements/Carousel";
 import CardsRow from "./components/CardsRow";
+import Button from "../../shared/FormElements/Button";
 
 import "./home.scss";
 
@@ -53,6 +54,49 @@ const secondCarouselProducts = [
    "https://m.media-amazon.com/images/I/31bIZXzTeQL._AC_SY200_.jpg"
 ]
 
+const thirdCarouselProducts = [
+   "https://m.media-amazon.com/images/I/31HoMmvrbgL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31QoBqnuajL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31YOYs5AAsL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31eoPYxETeL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/410zZ8ytLnL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31EHq2Tz5fL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31eAAt9ljPL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/21Ubi9LkTdL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31ZPEdEgJBL._AC_SY200_.jpg"
+]
+
+const fourthCarouselProducts = [
+   "https://m.media-amazon.com/images/I/51FPe-5D+QL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51S-GMIU1BL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41krMJ9U1gL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41cELYphGYL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31nagsaqsKL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41Eghqemf3L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41EeZFg8R7L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41pVN+ZKOeL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51t89Vmn3vL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/410Wp6y1qLL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41VmFrbrV+L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51-kVcFnZhL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41L79R5hD1L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41OXKN+XdCL._AC_SY200_.jpg"
+]
+
+const fifthCarouselProducts = [
+   "https://m.media-amazon.com/images/I/41C0-ZMRXNL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/31HQ-Vq1OZL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41bc0n7nDKL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41Q+q4N0xML._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51fLCrO1pwL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51ePa+K-f9L._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41PMd7bmPPL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51Rzu9ZkWeL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/51lfty5UyQL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41AtaIt1rOL._AC_SY200_.jpg",
+   "https://m.media-amazon.com/images/I/41vLJgbEGbL._AC_SY200_.jpg"
+]
+
 const Home = () => {
    return (
       <>
@@ -86,7 +130,8 @@ const Home = () => {
             data={[
                {
                   header: "Offerta Lampo",
-                  img:"https://images-na.ssl-images-amazon.com/images/I/51tWgDnfkAL._AC_SY240_.jpg",
+                  img:
+                     "https://images-na.ssl-images-amazon.com/images/I/51tWgDnfkAL._AC_SY240_.jpg",
                   details: {
                      euro: [254, 501],
                      cents: [99, 49],
@@ -99,27 +144,65 @@ const Home = () => {
                },
                {
                   header: "Le migliori novità in CD e Vinili",
-                  img:"https://images-eu.ssl-images-amazon.com/images/G/29/Music/NYP/Music_NYP_379x304._SY304_CB422614963_.jpg",
+                  img:
+                     "https://images-eu.ssl-images-amazon.com/images/G/29/Music/NYP/Music_NYP_379x304._SY304_CB422614963_.jpg",
                   details: false,
                   review: false,
                   footer: "Scopri",
                },
                {
                   header: "Valuta il tuo acquisto",
-                  img:"https://images-eu.ssl-images-amazon.com/images/I/413-cMFDzyL._SR215,215_.jpg",
+                  img:
+                     "https://images-eu.ssl-images-amazon.com/images/I/413-cMFDzyL._SR215,215_.jpg",
                   details: false,
                   review: true,
                   footer: "Scopri altri prodotti da recensire",
                },
                {
                   header: "Tutte le nostre offerte",
-                  img:"https://images-eu.ssl-images-amazon.com/images/G/29/Events/XCM_Manual_1300553_1532081_ES_es_category_card_es_es_3615802_379x304_1X_IT._SY304_CB412344895_.jpg",
+                  img:
+                     "https://images-eu.ssl-images-amazon.com/images/G/29/Events/XCM_Manual_1300553_1532081_ES_es_category_card_es_es_3615802_379x304_1X_IT._SY304_CB412344895_.jpg",
                   details: false,
                   review: false,
                   footer: "Scopri di più",
                },
             ]}
          ></CardsRow>
+
+         <Carousel
+            className="carousel--products"
+            title="Stampanti con certificazioni di sostenibilità"
+         >
+            {thirdCarouselProducts.map((el, idx) => {
+               return <img key={idx} src={el} alt="carousel product"></img>;
+            })}
+         </Carousel>
+
+         <Carousel
+            className="carousel--products"
+            title="Prodotti alimentari con certificazioni di sostenibilità"
+         >
+            {fourthCarouselProducts.map((el, idx) => {
+               return <img key={idx} src={el} alt="carousel product"></img>;
+            })}
+         </Carousel>
+
+         <article className="hor-banner-ad">
+            <img src="https://m.media-amazon.com/images/G/29/shazam/970x250-ghXzE._V413236657_.jpg" alt="ad-image"></img>
+            <section className="sponsor-info">
+               <Button to="/sponsor-info" className="link-btn--sponsor-info">Sponsorizzato</Button>
+               <i className="sponsor-info__icon"></i>
+            </section>
+         </article>
+
+         <Carousel
+            className="carousel--products"
+            title="Prodotti di elettronica con certificazioni di sostenibilità"
+         >
+            {fifthCarouselProducts.map((el, idx) => {
+               return <img key={idx} src={el} alt="carousel product"></img>;
+            })}
+         </Carousel>
       </>
    );
 
