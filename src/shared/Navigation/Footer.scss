@@ -6,6 +6,8 @@
    flex-direction: column;
 }
 
+
+// REDIRECT
 .footer__redirect {
    display: flex;
    width: 100%;
@@ -27,6 +29,8 @@
    }
 }
 
+
+// CONTACTS
 .footer__contacts {
    position: relative;
    width: 100%;
@@ -97,8 +101,59 @@
    }
 }
 
+
+// SERVICES
 .footer__services {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    width: 100%;
    height: 16em;
    background-color: rgb(20,26,34);
+
+   .services__table {
+      width: 75em;
+      height: fit-content;
+      margin: auto;
+      border-collapse: separate;
+      border-spacing: 3em 1em;
+      margin-bottom: 0;
+
+      td {
+         vertical-align: top;
+         padding: 0 .75em;
+      }
+
+      .link-btn--footer {
+         p {
+            margin: 0;
+         }
+
+         .service-title {
+            color: rgb(221, 221, 221);
+            font-size: 11px;
+         }
+
+         .service-desc {
+            color: rgb(153, 153, 153);
+            font-size: 10px;
+         }
+      }
+   }
+
+   .footer__copyright {
+      display: flex;
+      width: 78em;
+      height: fit-content;
+      margin: auto;
+      justify-content: space-around;
+      
+
+      .link-btn--footer, p {
+         color: rgb(221, 221, 221);
+         font-size: 12px;
+         margin: 0;
+         font-family: AmazonEmber_Rg;
+      }
+   }
 }

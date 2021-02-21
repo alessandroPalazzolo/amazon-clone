@@ -84,7 +84,95 @@ const Footer = props => {
             </section>
          </article>
 
-         <section className="footer__services"></section>
+         <article className="footer__services">
+            <table className="services__table">
+               <tr>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Advertising</p>
+                        <p className="service-desc">Trova, attira e coinvolgi i clienti</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Music</p>
+                        <p className="service-desc">Streaming di milioni di canzoni</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">AbeBooks</p>
+                        <p className="service-desc">Libri, arte & articoli da collezione</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Audible</p>
+                        <p className="service-desc">Download audiolibri</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Web Services</p>
+                        <p className="service-desc">Servizi Cloud Scalabili</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Warehouse</p>
+                        <p className="service-desc">I nostri prodotti usati e ricondizionati</p>
+                     </Button>
+                  </td>           
+               </tr>
+               <tr>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Book Depository</p>
+                        <p className="service-desc">Libri con spedizione gratuita in tutto il mondo</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Kindle Direct Publishing</p>
+                        <p className="service-desc">Pubblica i tuoi libri in formato elettronico</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Prime Now</p>
+                        <p className="service-desc">Consegna in finestre di 2 ore</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Shopbop</p>
+                        <p className="service-desc">Designer, Marche, Fashion e stile</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Buisness</p>
+                        <p className="service-desc">Servizio per clienti buisness</p>
+                     </Button>
+                  </td>
+                  <td>
+                     <Button to="amazon-service" className="link-btn--footer">
+                        <p className="service-title">Amazon Second Chance</p>
+                        <p className="service-desc">Regala, scambia, dai una seconda vita</p>
+                     </Button>
+                  </td>
+               </tr>
+            </table>
+
+            <section className="footer__copyright">
+               <Button className="link-btn--footer" to="copyright">Condizioni generali di uso e vendita</Button>
+               <Button className="link-btn--footer" to="copyright">Informativa sulla privacy</Button>
+               <Button className="link-btn--footer" to="copyright">Area Legale</Button>
+               <Button className="link-btn--footer" to="copyright">Cookie</Button>
+               <Button className="link-btn--footer" to="copyright">Pubblicità definita in base agli interessi</Button>
+               <p>© 2010-2021, Amazon.com, Inc. o società affiliate.</p>
+            </section>
+         </article>
       </footer>
    )
 }
